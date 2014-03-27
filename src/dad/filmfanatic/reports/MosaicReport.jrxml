@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MosaicReport" language="groovy" columnCount="5" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="111" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b31f88dd-d5ea-40d5-a7f0-b491638bb195">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="rutaImagenes" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="compositor" class="java.lang.String">
+		<fieldDescription><![CDATA[compositor]]></fieldDescription>
+	</field>
+	<field name="director" class="java.lang.String">
+		<fieldDescription><![CDATA[director]]></fieldDescription>
+	</field>
+	<field name="estreno" class="java.lang.String">
+		<fieldDescription><![CDATA[estreno]]></fieldDescription>
+	</field>
+	<field name="generos" class="java.lang.String">
+		<fieldDescription><![CDATA[generos]]></fieldDescription>
+	</field>
+	<field name="guionista" class="java.lang.String">
+		<fieldDescription><![CDATA[guionista]]></fieldDescription>
+	</field>
+	<field name="poster" class="java.awt.Image">
+		<fieldDescription><![CDATA[poster]]></fieldDescription>
+	</field>
+	<field name="productor" class="java.lang.String">
+		<fieldDescription><![CDATA[productor]]></fieldDescription>
+	</field>
+	<field name="productora" class="java.lang.String">
+		<fieldDescription><![CDATA[productora]]></fieldDescription>
+	</field>
+	<field name="titulo" class="java.lang.String">
+		<fieldDescription><![CDATA[titulo]]></fieldDescription>
+	</field>
+	<field name="tituloOriginal" class="java.lang.String">
+		<fieldDescription><![CDATA[tituloOriginal]]></fieldDescription>
+	</field>
+	<field name="vista" class="java.lang.String">
+		<fieldDescription><![CDATA[vista]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="46" uuid="1a033993-478c-4e6e-9232-bd8075f14c32"/>
+				<textElement>
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Mis películas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="134" height="20" uuid="1363f117-f9d8-4e0a-afd2-79086e0748c2"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[FilmFanatic]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy hh:mm">
+				<reportElement x="455" y="0" width="100" height="20" uuid="b0fda03f-cf08-4d61-9bcd-c78c33aff08a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="220" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="138" width="110" height="20" uuid="b238a6a1-49b5-4139-b168-9d26e39306f1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="158" width="110" height="20" uuid="12b5854b-1f83-4f62-a55b-f2a8d5debf5b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{estreno}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="110" height="138" uuid="8f144b2e-0db0-47e5-bfe7-61476c962b74"/>
+				<imageExpression><![CDATA[$F{poster}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="176" y="31" width="123" height="20" uuid="aa0f8eec-16e8-4071-a004-44f4f6d0ee6e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="299" y="31" width="40" height="20" uuid="e57826c8-1257-4e55-9ada-dfece1c939db"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

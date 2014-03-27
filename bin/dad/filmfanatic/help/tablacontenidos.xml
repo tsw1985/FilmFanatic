@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<toc version="1.0"> 
+    
+	<tocitem text="Manual" target="manual"> 
+    	<tocitem text="Buscar, modificar y eliminar mis películas" target="mispeliculas"/>    	    	
+    	<tocitem text="Anadir película manualmente" target="anadir"/>
+    	<tocitem text="Anadir película desde MovieDataBase" target="anadirmoviedatabase"/>
+    	<tocitem text="Personalizar colores de la aplicación" target="personalizar"/>    	    	
+    	<tocitem text="Generar informes de mis películas" target="informes"/>
+    </tocitem>
+     
+ </toc>

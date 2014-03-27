@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ISO-8859-1'?> 
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 2.0//EN" "http://java.sun.com/products/javahelp/map_2_0.dtd"> 
+
+<map version="1.0"> 
+	<mapID target="manual"               url="html/manual.html" /> 
+	<mapID target="anadir"               url="html/anadir.html" />
+	<mapID target="anadirmoviedatabase"  url="html/anadirmoviedatabase.html" />
+	<mapID target="mispeliculas"         url="html/buscarmispeliculas.html" />
+	<mapID target="personalizar"         url="html/personalizar.html" />
+	<mapID target="informes"             url="html/informes.html" />
+</map>

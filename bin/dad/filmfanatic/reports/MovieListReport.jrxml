@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MovieListReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b8b732cd-4962-49cb-97e1-3a8ef1b32e5a">
+	<property name="ireport.zoom" value="1.818181818181819"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parameter1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="compositor" class="java.lang.String">
+		<fieldDescription><![CDATA[compositor]]></fieldDescription>
+	</field>
+	<field name="director" class="java.lang.String">
+		<fieldDescription><![CDATA[director]]></fieldDescription>
+	</field>
+	<field name="estreno" class="java.lang.String">
+		<fieldDescription><![CDATA[estreno]]></fieldDescription>
+	</field>
+	<field name="generos" class="java.lang.String">
+		<fieldDescription><![CDATA[generos]]></fieldDescription>
+	</field>
+	<field name="guionista" class="java.lang.String">
+		<fieldDescription><![CDATA[guionista]]></fieldDescription>
+	</field>
+	<field name="poster" class="java.lang.String">
+		<fieldDescription><![CDATA[poster]]></fieldDescription>
+	</field>
+	<field name="productor" class="java.lang.String">
+		<fieldDescription><![CDATA[productor]]></fieldDescription>
+	</field>
+	<field name="productora" class="java.lang.String">
+		<fieldDescription><![CDATA[productora]]></fieldDescription>
+	</field>
+	<field name="titulo" class="java.lang.String">
+		<fieldDescription><![CDATA[titulo]]></fieldDescription>
+	</field>
+	<field name="tituloOriginal" class="java.lang.String">
+		<fieldDescription><![CDATA[tituloOriginal]]></fieldDescription>
+	</field>
+	<field name="vista" class="java.lang.String">
+		<fieldDescription><![CDATA[vista]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="38" uuid="69585d76-035b-4294-b868-1bcac437b1aa"/>
+				<textElement>
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Mis películas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="13" uuid="ef93e7a2-1b6e-4834-9fca-5075f811d8a3"/>
+				<text><![CDATA[FilmFanatic]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy hh:mm">
+				<reportElement x="455" y="0" width="100" height="13" uuid="2c2e9769-71be-4ccd-99b1-f93f30988149"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="239" y="1" width="35" height="20" uuid="140189c1-6945-485d-8ade-c288beaa5ac5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Año]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="1" width="78" height="19" uuid="0aadb21c-7fd5-4972-9ace-400f0322b7db"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Director]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="0" width="102" height="20" uuid="28e700d9-bc5e-488e-a34e-df624438bda7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Género]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="0" width="51" height="20" uuid="602d8d10-2928-4617-a3bc-5290bae6cbeb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vista]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="22" width="552" height="1" uuid="a6b933c1-7b0a-4508-946f-4c827e4535d3"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="229" height="20" uuid="ee1ed461-cb04-4212-86d4-fd9801d7d7f6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Título]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="2" width="229" height="27" uuid="ee585b32-103e-477b-96e7-ba2febbfda5d"/>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="386" y="0" width="102" height="29" uuid="78d03441-af0a-44b4-9c7c-5b09f90563fc"/>
+				<textFieldExpression><![CDATA[$F{generos}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="504" y="0" width="51" height="29" uuid="4d341b40-4dba-464f-9ea6-5e126292ab6b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{vista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="2" width="35" height="27" uuid="1aa8d7b7-5fda-4dbb-8456-307202383cf2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{estreno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="286" y="2" width="78" height="27" uuid="e64f3731-549a-4e4f-9c19-09484eeecae5"/>
+				<textFieldExpression><![CDATA[$F{director}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="29" width="552" height="1" uuid="4b7baeb5-61e4-49c4-ac6f-16594f9c18ee"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<textField>
+				<reportElement x="194" y="30" width="92" height="20" uuid="691fdf9c-7821-441a-a80e-7c19ccbd6da4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="286" y="30" width="49" height="20" uuid="fe44f66d-fd09-4478-ba1e-14da26041c23"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
